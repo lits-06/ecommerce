@@ -81,7 +81,7 @@ func ValidateToken(signedtoken string) (claim *SignedDetails, msg string) {
 	return claims, msg
 }
 
-func UpdateAllTokens(signedtoken, signedrefreshtoken. userid string) {
+func UpdateAllTokens(signedtoken, signedrefreshtoken, userid string) {
 	var ctx, cancel = context.WithTimeout(context.Background(), 100*time.Second)
 
 	var updateobj primitive.D
